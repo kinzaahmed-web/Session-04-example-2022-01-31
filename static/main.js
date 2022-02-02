@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    let btn = document.querySelector("button#tester")
-    btn.addEventListener("click", (e) => {
-	console.log("what what?!");
-    });
-});
+register = function () {
+  let textBox = document.querySelector("#my-text-box");
+  let e = document.createElement("li");
+  e.textContent = textBox.value;
+  document.querySelector("#nameList").appendChild(e);
+};

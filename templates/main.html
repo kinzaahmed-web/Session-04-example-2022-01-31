@@ -6,15 +6,29 @@
 
   <title>My Little Website</title>
   <link rel="stylesheet" href="/static/main.css">
-  <script src="static/main.js"></script>
+  <script src="static/main.js" defer></script>
 </head>
 
 <body>
   <h1>HELLO {{user}}</h1>
   {% if user == "unknown" %}
   <p> I don't think I know who you are. Could you throw a <pre>?userName=something</pre> at the end of the old url there for me? </p>
+  {% else %}
+  <h1>welcome to <i>active and fit</i></h1>
+
+  <div class="row">
+    <div class="column">
+      <img src="https://media.istockphoto.com/vectors/vector-illustration-of-young-woman-in-sportswear-running-vector-id1147479377?b=1&k=20&m=1147479377&s=170667a&w=0&h=_JcvtVqYzorxpJjt9qxUzVlMOBk6zOGplSopdLL8Aks=">
+    </div>
+    <div class="column">
+      <p class="text">welcome! I am so glad you came to this website. <i> active and fit</i> is a place where everyone can encourage each other to continue staying healthy and fit - while also making it fun with challenges and active streaks you can share with your friends to encourage one another! Sign up below to be considered a part of the group!</p>
+      <input type="text" id="my-text-box">
+      <button onclick="register()">Register!</button>
+      <ol id="nameList">
+      </ol>
+    </div>
+  </div>
   {% endif %}
-  <button id="tester">test</button>
   
 </body>
 </html>
